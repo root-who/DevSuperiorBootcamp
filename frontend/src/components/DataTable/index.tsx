@@ -1,7 +1,7 @@
 function DataTable(){
     return (
         <>
-            <div className="table-responsive">
+            <div className="table-responsive mt-5">
                 <table className="table table-striped table-sm">
                     <thead>
                         <tr>

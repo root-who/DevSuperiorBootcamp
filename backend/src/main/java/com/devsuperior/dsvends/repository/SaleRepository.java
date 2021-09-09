@@ -1,9 +1,9 @@
 package com.devsuperior.dsvends.repository;
 
-import com.devsuperior.dsvends.entity.Sales;
+import com.devsuperior.dsvends.entity.Sale;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SalesRepository extends JpaRepository<Sales, Long> {
+public interface SaleRepository extends JpaRepository<Sale, Long> {
 }

@@ -1,12 +1,15 @@
 package com.devsuperior.dsvends.entity;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
 @Table(name="tb_sales")
-public class Sales {
+public class Sale {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,11 +22,11 @@ public class Sales {
     @JoinColumn(name="seller_id")
     private Seller seller;
 
-    public Sales(){
+    public Sale(){
 
     }
 
-    public Sales(Long id, Integer visited, Integer deals, BigDecimal amount, LocalDate date, Seller seller) {
+    public Sale(Long id, Integer visited, Integer deals, BigDecimal amount, LocalDate date, Seller seller) {
         this.id = id;
         this.visited = visited;
         this.deals = deals;
@@ -32,7 +35,7 @@ public class Sales {
         this.seller = seller;
     }
 
-    public Sales(Integer visited, Integer deals, BigDecimal amount, LocalDate date, Seller seller) {
+    public Sale(Integer visited, Integer deals, BigDecimal amount, LocalDate date, Seller seller) {
         this.visited = visited;
         this.deals = deals;
         this.amount = amount;

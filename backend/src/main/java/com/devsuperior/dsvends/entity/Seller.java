@@ -12,7 +12,7 @@ public class Seller {
     private Long id;
     private String name;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "seller")
-    private List<Sales> sales;
+    private List<Sale> sales;
 
     public Seller(){
 
@@ -38,11 +38,11 @@ public class Seller {
         this.name = name;
     }
 
-    public List<Sales> getSales() {
+    public List<Sale> getSales() {
         return sales;
     }
 
-    public void setSales(List<Sales> sales) {
+    public void setSales(List<Sale> sales) {
         this.sales = sales;
     }
 }

@@ -20,30 +20,18 @@ function DataTable(){
         number: 0,
     });
 
-    function getDataFromServer(){
-        axios.get(`${baseUrl}/sales?page=${page}&size=10&sort=date,desc`)
-             .then((response)=>{
-                    const data = response.data as SalePage;
-                    const myContent = data.content;
-                    const totalOfPages = data.totalPages;
-                    const totalOfElements = data.totalElements;
-                    const theNumber = data.number;
-                    const l = data.last;
-                    const f = data.first;
-                    setTableData({
-                                content:myContent,
-                                 first:f, last:l, totalPages : totalOfPages,
-                                 totalElements:totalOfElements, number:theNumber
-                                 })
-             })
-    }
 
     function onPageChange(pagina:number){
         setPage(pagina);
         console.log(pagina)
     }
 
-     useEffect(getDataFromServer);
+     useEffect(()=>{
+        axios.get(`${baseUrl}/sales?page=${page}&size=10&sort=date,desc`)
+             .then((response)=>{
+                    setTableData(response.data)
+             })
+     }, [page]);
 
     return (
         <>

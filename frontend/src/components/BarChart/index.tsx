@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 import { SellerSuccess } from 'types/sales';
 import { baseUrl } from 'utils/requests';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 type SeriesData = {
          name: string;
@@ -69,14 +71,27 @@ const BarChart = () =>{
         },
     };
 
-    return (
-        <Chart
+    function spin(){
+        if(chartData.labels.categories.length === 0 ){
+            return( 
+                <Box sx={{ display: 'flex', ml: "15%", mt: "10%"}}>
+                    <CircularProgress />
+                </Box>
+            )
+        }
+        else return (
+            <Chart
             options={{...options, xaxis: chartData.labels}}
             series={chartData.series}
             type="bar"
             height="240"
+            />
+        )
+    }
 
-        />
+
+    return (
+        spin()
     )
 }
 

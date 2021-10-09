@@ -19,6 +19,8 @@ DS Vendas é uma aplicação full stack web, Spring Boot com React, construída 
 A aplicação em React.js consiste em uma organização feita em formato de gráfico, para apresentar os dados de vendedores, como: nome, taxa de sucesso de vendas, valor da venda e data.
 Os dados são buscado na API criado em Java utilzando o framework SpringBoot. 
 
+https://dsvendas-jpg.netlify.app/
+
 ## Ferramentas 🛠
 
 ### Back end

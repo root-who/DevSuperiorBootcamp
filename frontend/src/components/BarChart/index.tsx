@@ -24,7 +24,6 @@ export const round = (value: number, precision: number) => {
 }
 
 const BarChart = () =>{
-
     const [chartData, setChartData] = useState<ChartData>({
             labels: {
                 categories:[]

@@ -12,7 +12,6 @@ import Box from '@mui/material/Box';
 
 
 function DataTable(){
-
     const [page, setPage]= useState(0);
     const [tableData , setTableData] = useState<SalePage>({
         first: true,

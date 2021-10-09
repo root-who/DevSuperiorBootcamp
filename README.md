@@ -43,7 +43,7 @@ https://dsvendas-jpg.netlify.app/
  - Front end web: Netlify
  - Banco de dados: Postgresql
  
- [![Netlify Status](https://api.netlify.com/api/v1/badges/1fd8124c-97fd-4b53-abb9-f3ed74756794/deploy-status)](https://app.netlify.com/sites/igti-github-search/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4a943632-8527-4e5c-bf90-dd3a695806ff/deploy-status)](https://app.netlify.com/sites/dsvendas-jpg/deploys)
 
 ## Como executar o projeto :rocket:
 

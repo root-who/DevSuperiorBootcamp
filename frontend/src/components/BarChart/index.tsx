@@ -60,8 +60,7 @@ const BarChart = () =>{
                     })
             })
     }
-
-    
+   
 
     const options = {
         plotOptions: {
@@ -88,8 +87,6 @@ const BarChart = () =>{
             />
         )
     }
-
-
     return (
         spin()
     )
